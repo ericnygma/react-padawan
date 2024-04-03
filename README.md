@@ -1,1 +1,1 @@
-# Start learnng REACT
+# Start learning REACT
