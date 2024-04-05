@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [color, setColor] = useState('olive')
+  const [color, setColor] = useState('black')
 
   function changeColor(color){
     setColor(color)
@@ -11,10 +11,11 @@ function App() {
 
   return (
     <>
-      <h1 className='bg-gradient-to-br from-yellow-400 to-purple-600 font-bold text-center text-xl'>Bockground Changer with Vite & Tailwind</h1>
+      <h1 className='bg-gradient-to-br from-yellow-400 to-purple-600 font-bold text-center text-xl'>Bockground Color Changer with Vite & Tailwind</h1>
       <div className="w-full h-screen duration-200" style={{backgroundColor: color}}>
         <div className="fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2">
           <div className="flex flex-wrap justify-center gap-3 shadow-lg bg-white px-3 py-2 rounded-3xl">
+            {/* only the red buttton uses changeColor() to change the color */}
             <button
             className='outline-none shadow-lg px-4 py-1 rounded-full text-white bg-red-600'
             onClick={() => changeColor('red')}>Red</button>
