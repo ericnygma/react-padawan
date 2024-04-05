@@ -1,0 +1,11 @@
+.student {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    padding:10px;
+    border: 5px solid #ccc1;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px #888;
+}
+.student p{
+    margin: 0;
+}
