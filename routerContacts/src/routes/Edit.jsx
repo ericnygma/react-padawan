@@ -1,21 +1,12 @@
 import React from 'react'
-import { 
-  Form, 
-  useLoaderData, 
-  redirect,
-} from "react-router-dom";
-import { updateContact } from '../contacts';
+import { Form, useLoaderData, redirect, } from "react-router-dom";
+import { updateContact } from "../contacts";
 
 export async function action({ request, params }) {
   const formData = await request.formData();
   const updates = Object.fromEntries(formData);
   await updateContact(params.contactId, updates);
   return redirect(`/contacts/${params.contactId}`);
-}
-
-export async function loader({ parms}) {
-  const contact = await getContact(parms.contactID);
-  return { contact };
 }
 
 export default function EditContact() {
